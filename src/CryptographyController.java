@@ -3,9 +3,9 @@ import java.io.IOException;
 
 class CryptographyController {
 
-    void Perform(Arguments args, String Input, String Key, String Output) {
+    void Perform(Arguments arg, String Input, String Key, String Output) {
         try {
-            if(args == Arguments.Decrypt) {
+            if(arg == Arguments.Decrypt) {
                 Crypto.Decrypt(new File(Input), new File(Key), new File(Output));
             } else {
                 Crypto.Encrypt(new File(Input), new File(Key), new File(Output));
